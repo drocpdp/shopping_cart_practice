@@ -43,7 +43,7 @@ const productslist = [
         },        
         {
             'id': 8,
-            'name': 'Plain WHite T-Shirt',
+            'name': 'Plain White T-Shirt',
             'category': 'SHIRTS',
             'price': 10.00 
         },        
