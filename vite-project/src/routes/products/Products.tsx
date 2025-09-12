@@ -1,15 +1,10 @@
-import { useState } from "react";
 import productslist from "../../data/products";
-
-
+import { useContext } from "react";
+import { CartContext } from "../../contexts/cart.context";
 
 const Products = () => {
-    const [addedItems, addItemsToCart] = useState([]);
 
-    const clickButton = (btnText: string) => {
-        addItemsToCart([...addedItems, btnText]);
-    }
-
+    const { clickButton } = useContext(CartContext);
 
     return (
         <>
@@ -45,11 +40,6 @@ const Products = () => {
 
                     )
                 )}
-                </div>
-                <div>
-                    {addedItems.map((item, index) => (
-                        <li key={index}>{item.name}, {item.id}, {item.price}</li>
-                    ))}
                 </div>
             
             
