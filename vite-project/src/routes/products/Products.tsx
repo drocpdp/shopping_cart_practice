@@ -1,10 +1,10 @@
-import productslist from "../../data/products";
 import { useContext } from "react";
+import productslist from "../../data/products";
 import { CartContext } from "../../contexts/cart.context";
 
 const Products = () => {
 
-    const { clickButton } = useContext(CartContext);
+    const {addToCart} = useContext(CartContext);
 
     return (
         <>
@@ -29,9 +29,7 @@ const Products = () => {
                         <div>
                             <button 
                                 className="px-4 py-2 bg-blue-400 text-white rounded-lg hover:bg-blue-600"
-                                onClick={
-                                    () => clickButton(item)
-                                }
+                                onClick ={()=>{addToCart(item)}}
                             >
                             Add to Cart
                             </button>
